@@ -16,11 +16,13 @@
                 <a href="index.html">HOME</a>
                 <a href="about.html">ABOUT</a>
                 <div class="nav-dropdown">
-                    <a href="services.html" class="dropdown-toggle">
+                    <button class="dropdown-toggle" type="button" aria-expanded="false">
                         SERVICES
-                        <span class="arrow">›</span>
-                    </a>
+                        <span class="arrow">&rsaquo;</span>
+                    </button>
+
                     <div class="dropdown-menu">
+                        <a href="services.html">All Services</a>
                         <a href="service-continuing-airworthiness.html">Continuing Airworthiness Management</a>
                         <a href="service-maintenance-programmes.html">Customised Maintenance Programmes</a>
                         <a href="service-aircraft-records.html">Aircraft Records Management</a>
@@ -34,9 +36,13 @@
                 <a href="news.html">NEWS</a>
                 <a href="contact.html">CONTACT</a>
             </nav>
-            <button class="menu-toggle" aria-label="Open menu">
-                ☰
-            </button>
+            </nav>
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+            >&#9776;</button>
         </div>
     </header>
 

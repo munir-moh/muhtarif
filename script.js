@@ -4,18 +4,19 @@ const dropdownToggle = document.querySelector(".dropdown-toggle");
 const navDropdown = document.querySelector(".nav-dropdown");
 
 
-// Main hamburger
 menuToggle.addEventListener("click", () => {
-    mainNav.classList.toggle("active");
+    const isOpen = mainNav.classList.toggle("active");
+
+    menuToggle.textContent = isOpen ? "\u00D7" : "\u2630";
+    menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
 });
 
-
-// Services dropdown
 dropdownToggle.addEventListener("click", () => {
-    navDropdown.classList.toggle("active");
+    const isOpen = navDropdown.classList.toggle("active");
+    dropdownToggle.setAttribute("aria-expanded", String(isOpen));
 });
 
-// Highlight the current page in the navbar
 const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
 const navLinks = document.querySelectorAll(".main-nav > a");

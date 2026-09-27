@@ -1949,3 +1949,360 @@ a {
         grid-column: auto;
     }
 }
+
+/* Append this to the end of style.css */
+
+img,
+svg,
+video {
+    max-width: 100%;
+}
+
+.container {
+    width: min(92%, 1400px);
+}
+
+@media (max-width: 1100px) {
+    .services-grid,
+    .services-page-section .services-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .approval-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(24px, 4vw, 50px);
+    }
+
+    .service-intro-container,
+    .specialised-services-container,
+    .registry-container,
+    .migration-feature-container,
+    .migration-feature-container.reverse,
+    .careers-container,
+    .news-container,
+    .what-we-do-container,
+    .about-cards-container,
+    .approvals-intro,
+    .contact-container {
+        gap: clamp(24px, 4vw, 48px);
+    }
+
+    .service-intro-container > *,
+    .specialised-services-container > *,
+    .registry-container > *,
+    .migration-feature-container > *,
+    .careers-container > *,
+    .news-container > *,
+    .what-we-do-container > *,
+    .about-cards-container > *,
+    .approvals-intro > *,
+    .contact-container > * {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .header-container {
+        min-height: 75px;
+        position: relative;
+    }
+
+    .logo img {
+        width: clamp(110px, 18vw, 150px);
+        height: auto;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: relative;
+        z-index: 1002;
+        padding: 8px;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        max-height: calc(100vh - 75px);
+        overflow-y: auto;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 0 14px;
+        background: #107FAE;
+        z-index: 1001;
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .main-nav > a,
+    .dropdown-toggle {
+        width: 100%;
+        min-height: 48px;
+        padding: 12px 24px;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 700;
+        white-space: normal;
+    }
+
+    .nav-dropdown {
+        width: 100%;
+    }
+
+    .dropdown-toggle {
+        justify-content: space-between;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: static;
+        width: 100%;
+        padding: 0;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    .nav-dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu a {
+        padding: 12px 40px;
+        font-size: 14px;
+        white-space: normal;
+    }
+}
+
+@media (max-width: 820px) {
+    .about-container,
+    .service-intro-container,
+    .specialised-services-container,
+    .registry-container,
+    .migration-feature-container,
+    .migration-feature-container.reverse,
+    .careers-container,
+    .news-container,
+    .what-we-do-container,
+    .about-cards-container,
+    .approvals-intro,
+    .contact-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+    }
+
+    .about-right {
+        padding-top: 0;
+    }
+
+    .services-grid,
+    .services-page-section .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .hero {
+        min-height: clamp(430px, 75vh, 560px);
+    }
+
+    .hero-container {
+        padding: 100px 0 70px;
+    }
+
+    .about-hero {
+        height: clamp(220px, 35vw, 300px);
+    }
+
+    .service-intro-image img,
+    .service-intro-image-2 img,
+    .service-intro-image-3 img,
+    .service-intro-image-4 img,
+    .service-intro-image-5 img,
+    .specialised-services-image img,
+    .registry-image img,
+    .careers-image img,
+    .what-we-do-image img,
+    .approvals-intro-image img {
+        height: clamp(220px, 45vw, 360px);
+    }
+
+    .news-image img {
+        height: clamp(200px, 42vw, 320px);
+    }
+
+    .migration-image-card {
+        min-height: 0;
+    }
+
+    .migration-image-card img {
+        height: clamp(220px, 45vw, 360px);
+        min-height: 0;
+    }
+
+    .service-card,
+    .about-info-card,
+    .approval-card,
+    .migration-card {
+        min-height: 0;
+    }
+
+    .about-info-card {
+        padding: clamp(22px, 4vw, 30px);
+    }
+
+    .hero-button,
+    .gold-button {
+        max-width: 100%;
+        white-space: normal;
+    }
+
+    h1 {
+        font-size: clamp(28px, 5vw, 42px) !important;
+    }
+
+    h2 {
+        font-size: clamp(22px, 3.5vw, 32px) !important;
+    }
+
+    h3 {
+        font-size: clamp(18px, 2.8vw, 24px) !important;
+    }
+
+    p,
+    li,
+    label {
+        font-size: clamp(15px, 1.8vw, 17px) !important;
+        line-height: 1.65;
+        overflow-wrap: anywhere;
+    }
+
+    .about-intro {
+        font-size: clamp(15px, 1.8vw, 17px) !important;
+        line-height: 1.65 !important;
+    }
+
+    .gold-button,
+    .hero-button {
+        font-size: clamp(15px, 2vw, 18px);
+        padding: 10px 20px;
+    }
+
+    input,
+    textarea,
+    select,
+    button {
+        max-width: 100%;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .spam-protection input {
+        width: 100%;
+        min-height: 44px;
+        font-size: 16px;
+    }
+
+    .form-group textarea {
+        height: auto;
+        min-height: 120px;
+    }
+
+    .about-section,
+    .services-section,
+    .service-intro,
+    .flexible-approach,
+    .specialised-services,
+    .maintenance-programme-services,
+    .maintenance-software,
+    .compliance-efficiency,
+    .records-services,
+    .records-digital,
+    .records-audit,
+    .records-advantage,
+    .service-advantage,
+    .bespoke-review,
+    .registry-expertise,
+    .review-advantage,
+    .acquisition-services,
+    .delivery-transition,
+    .aircraft-registry,
+    .operational-excellence,
+    .acquisition-advantage,
+    .data-migration-intro,
+    .migration-feature,
+    .migration-feature:last-of-type,
+    .careers-section,
+    .news-section,
+    .services-page-section,
+    .site-footer,
+    .what-we-do,
+    .about-cards-section,
+    .approvals-section,
+    .contact-section {
+        padding-block: clamp(40px, 7vw, 64px);
+    }
+
+    .footer-container {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 560px) {
+    .container {
+        width: 94%;
+    }
+
+    .services-grid,
+    .services-page-section .services-grid,
+    .approval-cards,
+    .footer-container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 400px;
+        margin-inline: auto;
+    }
+
+    .service-image {
+        height: clamp(130px, 40vw, 170px);
+    }
+
+    .contact-form-card {
+        padding: 22px 16px 26px;
+    }
+
+    .dropdown-menu a {
+        padding-inline: 32px;
+    }
+}
+.nav-dropdown.active .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
