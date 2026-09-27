@@ -1300,7 +1300,7 @@ a {
     margin-bottom: 28px;
 }
 
-.linkedin-icon {
+.instagram-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1309,8 +1309,22 @@ a {
     border-radius: 50%;
     background: #107FAE;
     color: #ffffff;
-    font-size: 15px;
-    font-weight: 700;
+}
+
+.instagram-icon svg {
+    display: block;
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.instagram-icon .instagram-dot {
+    fill: currentColor;
+    stroke: none;
 }
 
 .what-we-do {
