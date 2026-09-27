@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News | Muhtarif Support</title>
+    <title>Contact | Muhtarif Solutions</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header class="site-header">
         <div class="header-container">
@@ -51,74 +50,72 @@
         </div>
     </header>
 
-    <section class="about-hero">
+     <section class="about-hero">
         <div class="about-hero-content">
-            <h1>News</h1>
+            <h1>Contact</h1>
         </div>
     </section>
 
-    <section class="news-section">
-        <div class="container news-container">
-            <div class="news-image">
-                <img
-                    src="images/news.jpg"
-                    alt="Muhtarif Support News"
-                >
+    <main class="contact-section">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h2>Contact</h2>
+                <h3>We’re here to help.</h3>
+                <p>
+                    Whether you have a question, need support or want
+                    to explore working with us, our team is ready to hear
+                    from you.
+                </p>
+                <h2>Head Office</h2>
+                <p>
+                    Muhtarif Support & Solution<br>
+                    Shafa Fuel Station<br>
+                    Bill ClintonDrive<br>
+                    FCT-Abuja
+                </p>
+                <h2>Telephone</h2>
+                <p>
+                    +234 907 124 7869
+                </p>
+                <h2>Email</h2>
+                <p>
+                    info@aatscamo.co.uk
+                </p>
             </div>
-            <article class="news-content">
-                <h2>
-                    Big News: We’ve Rebranded!
-                </h2>
-                <p>
-                    We are incredibly excited to announce the official
-                    rebranding of our company, marking a significant
-                    milestone in our journey.
-                </p>
-                <p>
-                    As we continue to grow and look toward the future,
-                    we wanted our brand to reflect that evolution.
-                    This transformation includes a modernised visual
-                    identity and a completely redesigned website
-                    built from the ground up with you in mind.
-                </p>
-                <p>
-                    What's New:
-                </p>
-                <ul>
-                    <li>
-                        A Restyled Logo: A fresh, modern look.
-                    </li>
-                    <li>
-                        An Enhanced Digital Experience: Our new website
-                        features improved navigation, clearer information
-                        and a streamlined experience to help you find what
-                        you need faster.
-                    </li>
-                </ul>
-                <p>
-                    What remains the same:
-                </p>
-                <p>
-                    While our appearance has changed, our core mission
-                    has not. Our commitment to delivering excellent
-                    service, quality and reliability remains exactly
-                    the same. You can continue to rely on the same team
-                    and standards you have always known.
-                </p>
-                <p>
-                    We invite you to explore our new website and
-                    experience the updated look firsthand!
-                </p>
-                <p>
-                    Let us know what you think.
-                </p>
-                <p>
-                    Thank you for your continued trust and partnership
-                    as we move into this exciting new chapter together.
-                </p>
-            </article>
+            <div class="contact-form-card">
+                <h2>Contact Form</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telephone">Telephone</label>
+                        <input type="tel" id="telephone" name="telephone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <div class="spam-protection">
+                        <strong>Spam Protection:</strong>
+                        <span>
+                            What number is larger, 2 or 8? Type your answer below:
+                        </span>
+                        <input type="text" id="spamAnswer" name="spam-answer" required>
+                    </div>
+                    <button type="submit" class="gold-button">
+                        Submit
+                    </button>
+                    <p id="formMessage"></p>
+                </form>
+            </div>
         </div>
-    </section>
+    </main>
 
     <footer class="site-footer">
         <div class="container footer-container">

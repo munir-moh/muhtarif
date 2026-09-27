@@ -1,7 +1,3 @@
-/* =========================
-   GENERAL
-========================= */
-
 * {
     margin: 0;
     padding: 0;
@@ -25,40 +21,24 @@ a {
     margin: 0 auto;
 }
 
-
-/* =========================
-   HEADER
-========================= */
-
 .site-header {
     position: absolute;
     top: 0;
     left: 0;
-
     width: 100%;
-
     z-index: 1000;
-
     background: transparent;
 }
 
 .header-container {
     width: 90%;
     max-width: 1150px;
-
     min-height: 90px;
-
     margin: 0 auto;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
-
-/* =========================
-   LOGO
-========================= */
 
 .logo {
     display: block;
@@ -66,40 +46,42 @@ a {
 }
 
 .logo img {
-    width: 125px;
-    height: auto;
+    width: 200px;
+    height: 150px;
     display: block;
 }
-
-
-/* =========================
-   NAVIGATION
-========================= */
 
 .main-nav {
     display: flex;
     align-items: center;
-
     gap: 31px;
 }
 
 .main-nav > a,
 .dropdown-toggle {
+    border: none;
+    outline: none;
+    background: transparent;
     color: #e8d9b3;
-
     font-family: Arial, sans-serif;
-
-    font-size: 18px;
-    font-weight: 500;
-
+    font-size: 16px;
+    font-weight: 700;
     letter-spacing: 0.3px;
-
     white-space: nowrap;
-
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
     transition: color 0.3s ease;
 }
 
-.main-nav > a:first-child {
+.dropdown-toggle:hover {
+    color: #ffffff;
+}
+
+.main-nav > a.active {
     color: #ffffff;
 }
 
@@ -107,11 +89,6 @@ a {
 .dropdown-toggle:hover {
     color: #ffffff;
 }
-
-
-/* =========================
-   SERVICES DROPDOWN
-========================= */
 
 .nav-dropdown {
     position: relative;
@@ -131,92 +108,62 @@ a {
 
 .dropdown-menu {
     position: absolute;
-
     top: 28px;
     left: 0;
-
     width: 260px;
-
-    background: #171819;
-
+    background: #107FAE;
     padding: 10px 0;
-
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-
     opacity: 0;
     visibility: hidden;
-
     transform: translateY(8px);
-
     transition: all 0.25s ease;
 }
 
 .nav-dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
-
     transform: translateY(0);
 }
 
 .dropdown-menu a {
     display: block;
-
     padding: 11px 18px;
-
     color: #ffffff;
-
     font-size: 12px;
-
     line-height: 1.4;
 }
 
 .dropdown-menu a:hover {
     background: #252628;
-    color: #e5aa18;
+    color: #107FAE;
 }
-
-
-/* =========================
-   MOBILE BUTTON
-========================= */
 
 .menu-toggle {
     display: none;
-
     border: none;
     background: transparent;
-
     color: #ffffff;
-
     font-size: 26px;
-
     cursor: pointer;
 }
-
-/* =========================
-   HERO SECTION
-========================= */
 
 .hero {
     position: relative;
     width: 100%;
     min-height: 580px;
-
     background-image:
         linear-gradient(
             rgba(0, 0, 0, 0.55),
             rgba(0, 0, 0, 0.55)
         ),
         url("./images/hero.jpg");
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     color: #ffffff;
     overflow: hidden;
 }
@@ -267,7 +214,7 @@ a {
     justify-content: center;
     gap: 8px;
     padding: 12px 30px;
-    background: #e5aa18;
+    background: #107FAE;
     color: #ffffff;
     border-radius: 30px;
     font-size: 14px;
@@ -281,33 +228,25 @@ a {
 }
 
 .hero-button:hover {
-    background: #f2bc2c;
+    background: #107FAE;
 }
-
-/* =========================
-   ABOUT HERO
-========================= */
 
 .about-hero {
     position: relative;
     width: 100%;
     height: 300px;
-
     background-image:
         linear-gradient(
             rgba(0, 0, 0, 0.58),
             rgba(0, 0, 0, 0.58)
         ),
         url("./images/about-hero.jpg");
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     color: #ffffff;
     overflow: hidden;
 }
@@ -320,7 +259,6 @@ a {
     width: 100%;
     height: 80px;
     background: #121416;
-
     clip-path: polygon(
         0 100%,
         100% 0,
@@ -341,10 +279,6 @@ a {
     font-weight: 600;
 }
 
-/* =========================
-   ABOUT SECTION
-========================= */
-
 .about-section {
     position: relative;
     background: #121416;
@@ -360,7 +294,7 @@ a {
 }
 
 .about-left h2 {
-    color: #e5aa18;
+    color: #107FAE;
     font-size: 45px;
     line-height: 1.2;
     margin-bottom: 25px;
@@ -394,7 +328,7 @@ a {
     gap: 10px;
     padding: 11px 25px;
     border-radius: 30px;
-    background: #e5aa18;
+    background: #107FAE;
     color: #ffffff;
     font-size: 22px;
     font-weight: 600;
@@ -407,7 +341,7 @@ a {
 }
 
 .gold-button:hover {
-    background: #f2bc2c;
+    background: #107FAE;
     transform: translateY(-2px);
 }
 
@@ -422,19 +356,6 @@ a {
     clip-path: polygon(0 100%, 100% 0, 100% 100%);
 }
 
-/* =========================
-   SERVICES SECTION
-========================= */
-
-/* =========================
-   SERVICES SECTION
-========================= */
-
-/* =========================
-   SERVICES SECTION
-========================= */
-
-
 .services-section {
     position: relative;
     background: linear-gradient(
@@ -448,7 +369,6 @@ a {
     overflow: hidden;
 }
 
-/* Keep heading and cards above the transition */
 .services-section .container {
     position: relative;
     z-index: 2;
@@ -456,7 +376,7 @@ a {
 
 .section-title {
     text-align: center;
-    color: #e5aa18;
+    color: #107FAE;
     font-size: 32px;
     margin-bottom: 35px;
     font-weight: 600;
@@ -518,10 +438,6 @@ a {
     font-size: 18px;
 }
 
-/* =========================
-   SERVICE INTRO
-========================= */
-
 .service-intro {
     position: relative;
     background: #121416;
@@ -537,7 +453,7 @@ a {
 }
 
 .service-intro-content h2 {
-    color: #e5aa18;
+    color: #107FAE;
     font-size: 32px;
     line-height: 1.2;
     margin: 0 0 22px;
@@ -599,10 +515,6 @@ a {
     border-radius: 12px;
 }
 
-/* =========================
-   FLEXIBLE APPROACH
-========================= */
-
 .flexible-approach {
     background: #121416;
     color: #ffffff;
@@ -610,7 +522,7 @@ a {
 }
 
 .flexible-approach h2 {
-    color: #e5aa18;
+    color: #107FAE;
     font-size: 32px;
     line-height: 1.2;
     margin: 0 0 20px;
@@ -640,10 +552,6 @@ a {
     color: #ffffff;
 }
 
-/* =========================
-   SPECIALISED SERVICES
-========================= */
-
 .specialised-services {
     background: #121416;
     color: #ffffff;
@@ -670,7 +578,7 @@ a {
 }
 
 .specialised-services-content h2 {
-    color: #e5aa18;
+    color: #107FAE;
     font-size: 32px;
     line-height: 1.2;
     margin: 18px 0 20px;
@@ -704,10 +612,6 @@ a {
     margin-top: 15px;
 }
 
-/* =========================
-   MAINTENANCE PROGRAMME SERVICES
-========================= */
-
 .maintenance-programme-services {
     background: #121416;
     color: #ffffff;
@@ -715,7 +619,7 @@ a {
 }
 
 .maintenance-programme-services h2 {
-    color: #e5aa18;
+    color: #107FAE;
     font-size: 32px;
     line-height: 1.2;
     margin: 0 0 20px;
@@ -745,10 +649,6 @@ a {
     color: #ffffff;
 }
 
-/* =========================
-   MAINTENANCE SOFTWARE
-========================= */
-
 .maintenance-software {
     background: #121416;
     color: #ffffff;
@@ -756,7 +656,7 @@ a {
 }
 
 .maintenance-software h2 {
-    color: #e5aa18;
+    color: #107FAE;
     font-size: 32px;
     line-height: 1.2;
     margin: 0 0 20px;
@@ -786,10 +686,6 @@ a {
     color: #ffffff;
 }
 
-/* =========================
-   COMPLIANCE & EFFICIENCY
-========================= */
-
 .compliance-efficiency {
     background: #121416;
     color: #ffffff;
@@ -797,7 +693,7 @@ a {
 }
 
 .compliance-efficiency h2 {
-    color: #e5aa18;
+    color: #107FAE;
     font-size: 32px;
     line-height: 1.2;
     margin: 0 0 20px;
@@ -823,10 +719,6 @@ a {
     margin-bottom: 4px;
 }
 
-/* =========================================
-   AIRCRAFT RECORDS MANAGEMENT PAGE
-========================================= */
-
 .records-services {
     background: #121416;
     color: #ffffff;
@@ -837,7 +729,7 @@ a {
 .records-digital h2,
 .records-audit h2,
 .records-advantage h2 {
-    color: #e5aa18;
+    color: #107FAE;
     font-size: 32px;
     line-height: 1.2;
     margin: 0 0 20px;
@@ -876,26 +768,17 @@ a {
     color: #ffffff;
 }
 
-
-/* DIGITAL RECORDS */
-
 .records-digital {
     background: #121416;
     color: #ffffff;
     padding: 5px 0 20px;
 }
 
-
-/* RECORDS AUDIT */
-
 .records-audit {
     background: #121416;
     color: #ffffff;
     padding: 5px 0 25px;
 }
-
-
-/* MUHTARIF ADVANTAGE */
 
 .records-advantage {
     background: #121416;
@@ -914,9 +797,6 @@ a {
 .records-advantage .gold-button {
     margin-top: 5px;
 }
-/* =========================
-   SERVICE ADVANTAGE
-========================= */
 
 .service-advantage {
     background: #121416;
@@ -924,9 +804,8 @@ a {
     padding: 35px 0 130px;
 }
 
-
 .service-advantage-content h2 {
-    color: #e5aa18;
+    color: #107FAE;
     font-size: 32px;
     line-height: 1.2;
     margin: 0 0 20px;
@@ -944,10 +823,6 @@ a {
     margin-top: 5px;
 }
 
-/* =========================================
-   AIRWORTHINESS REVIEW PAGE
-========================================= */
-
 .bespoke-review {
     background: #121416;
     color: #ffffff;
@@ -957,7 +832,7 @@ a {
 .bespoke-review h2,
 .registry-content h2,
 .review-advantage h2 {
-    color: #e5aa18;
+    color: #107FAE;
     font-size: 32px;
     line-height: 1.2;
     margin: 0 0 20px;
@@ -992,9 +867,6 @@ a {
     color: #ffffff;
 }
 
-
-/* MULTI-REGISTRY SECTION */
-
 .registry-expertise {
     background: #121416;
     color: #ffffff;
@@ -1024,9 +896,6 @@ a {
     margin-top: 25px;
 }
 
-
-/* MUHTARIF ADVANTAGE */
-
 .review-advantage {
     background: #121416;
     color: #ffffff;
@@ -1044,10 +913,6 @@ a {
 .review-advantage .gold-button {
     margin-top: 5px;
 }
-
-/* =========================================
-   AIRCRAFT ACQUISITION & DELIVERY PAGE
-========================================= */
 
 .acquisition-services,
 .delivery-transition,
@@ -1078,23 +943,17 @@ a {
     padding: 5px 0 130px;
 }
 
-
-/* HEADINGS */
-
 .acquisition-services h2,
 .delivery-transition h2,
 .aircraft-registry h2,
 .operational-excellence h2,
 .acquisition-advantage h2 {
-    color: #e5aa18;
+    color: #107FAE;
     font-size: 32px;
     line-height: 1.2;
     margin: 0 0 20px;
     font-weight: 600;
 }
-
-
-/* PARAGRAPHS */
 
 .acquisition-services p,
 .delivery-transition p,
@@ -1106,9 +965,6 @@ a {
     line-height: 1.7;
     margin: 0 0 15px;
 }
-
-
-/* LISTS */
 
 .acquisition-services ul,
 .delivery-transition ul,
@@ -1132,16 +988,9 @@ a {
     color: #ffffff;
 }
 
-
-/* ADVANTAGE BUTTON */
-
 .acquisition-advantage .gold-button {
     margin-top: 5px;
 }
-
-/* =========================================
-   DATA MIGRATION PAGE
-========================================= */
 
 .data-migration-intro {
     background: #121416;
@@ -1150,7 +999,7 @@ a {
 }
 
 .data-migration-intro h2 {
-    color: #e5aa18;
+    color: #107FAE;
     font-size: 32px;
     line-height: 1.2;
     margin: 0 0 20px;
@@ -1163,9 +1012,6 @@ a {
     line-height: 1.7;
     margin: 0;
 }
-
-
-/* FEATURE SECTIONS */
 
 .migration-feature {
     background: #121416;
@@ -1188,9 +1034,6 @@ a {
     grid-template-columns: 0.75fr 1.25fr;
 }
 
-
-/* TEXT CARD */
-
 .migration-card {
     background: linear-gradient(
         135deg,
@@ -1198,7 +1041,6 @@ a {
         #292b2e 55%,
         #3d3f42 100%
     );
-
     border-radius: 12px;
     padding: 28px 25px;
     display: flex;
@@ -1207,7 +1049,7 @@ a {
 }
 
 .migration-card h2 {
-    color: #e5aa18;
+    color: #107FAE;
     font-size: 32px;
     line-height: 1.2;
     margin: 0 0 20px;
@@ -1220,9 +1062,6 @@ a {
     line-height: 1.7;
     margin: 0;
 }
-
-
-/* IMAGE CARD */
 
 .migration-image-card {
     overflow: hidden;
@@ -1239,10 +1078,6 @@ a {
     object-fit: cover;
 }
 
-/* =========================================
-   CAREERS PAGE
-========================================= */
-
 .careers-section {
     position: relative;
     background: #121416;
@@ -1257,11 +1092,8 @@ a {
     align-items: center;
 }
 
-
-/* CAREERS TEXT */
-
 .careers-content h2 {
-    color: #e5aa18;
+    color: #107FAE;
     font-size: 32px;
     line-height: 1.2;
     margin: 0 0 25px;
@@ -1283,23 +1115,16 @@ a {
     margin: 0 0 18px;
 }
 
-
-/* VACANCY BAR */
-
 .vacancy-bar {
     width: 100%;
     min-height: 46px;
     margin-top: 12px;
     padding: 0 20px;
-
     background: #45464a;
-
     display: flex;
     align-items: center;
     gap: 14px;
-
     color: #ffffff;
-
     font-size: 15px;
     font-weight: 600;
 }
@@ -1307,20 +1132,14 @@ a {
 .vacancy-icon {
     width: 20px;
     height: 20px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: #ffffff;
     color: #45464a;
-
     font-size: 20px;
     font-weight: 500;
 }
-
-
-/* CAREERS IMAGE */
 
 .careers-image img {
     display: block;
@@ -1329,10 +1148,6 @@ a {
     object-fit: cover;
     border-radius: 14px;
 }
-
-/* =========================================
-   NEWS PAGE
-========================================= */
 
 .news-section {
     background: #121416;
@@ -1347,9 +1162,6 @@ a {
     align-items: start;
 }
 
-
-/* NEWS IMAGE */
-
 .news-image {
     overflow: hidden;
 }
@@ -1361,11 +1173,8 @@ a {
     object-fit: cover;
 }
 
-
-/* NEWS CONTENT */
-
 .news-content h2 {
-    color: #e5aa18;
+    color: #107FAE;
     font-size: 32px;
     line-height: 1.2;
     margin: 0 0 20px;
@@ -1390,9 +1199,6 @@ a {
     line-height: 1.7;
     margin-bottom: 4px;
 }
-/* =========================
-   SERVICES PAGE
-========================= */
 
 .services-page-section {
     position: relative;
@@ -1403,7 +1209,7 @@ a {
 
 .services-page-section .section-title {
     text-align: center;
-    color: #e5aa18;
+    color: #107FAE;
     font-size: 32px;
     margin-bottom: 35px;
     font-weight: 600;
@@ -1415,10 +1221,6 @@ a {
     gap: 12px;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
 .site-footer {
     position: relative;
     background: #45464a;
@@ -1426,8 +1228,6 @@ a {
     padding: 110px 0 70px;
     overflow: hidden;
 }
-
-/* Diagonal top edge */
 
 .site-footer::before {
     content: "";
@@ -1447,12 +1247,9 @@ a {
     padding-top: 45px;
 }
 
-
-/* Footer logo */
-
 .footer-logo {
     display: inline-block;
-    color: #e5aa18;
+    color: #107FAE;
     font-size: 28px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -1467,9 +1264,6 @@ a {
     font-weight: 400;
     margin-top: 6px;
 }
-
-
-/* Footer text */
 
 .copyright,
 .footer-links,
@@ -1486,15 +1280,12 @@ a {
 }
 
 .footer-links a:hover {
-    color: #e5aa18;
+    color: #107FAE;
 }
 
 .website-credit {
     margin-top: 8px;
 }
-
-
-/* Footer columns */
 
 .footer-column h3 {
     font-size: 18px;
@@ -1509,28 +1300,18 @@ a {
     margin-bottom: 28px;
 }
 
-
-/* LinkedIn */
-
 .linkedin-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 28px;
     height: 28px;
-
     border-radius: 50%;
-    background: #e5aa18;
+    background: #107FAE;
     color: #ffffff;
-
     font-size: 15px;
     font-weight: 700;
 }
-
-/* =========================
-   WHAT WE DO
-========================= */
 
 .what-we-do {
     position: relative;
@@ -1547,7 +1328,7 @@ a {
 }
 
 .what-we-do-content h2 {
-    color: #e5aa18;
+    color: #107FAE;
     font-size: 32px;
     line-height: 1.2;
     margin: 0 0 20px;
@@ -1584,10 +1365,6 @@ a {
     border-radius: 14px;
 }
 
-/* =========================
-   ABOUT INFORMATION CARDS
-========================= */
-
 .about-cards-section {
     position: relative;
     background: #121416;
@@ -1608,14 +1385,13 @@ a {
         #292b2e 55%,
         #3d3f42 100%
     );
-
     border-radius: 12px;
     padding: 30px 28px;
     min-height: 450px;
 }
 
 .about-info-card h2 {
-    color: #e5aa18;
+    color: #107FAE;
     font-size: 32px;
     margin: 0 0 18px;
     font-weight: 600;
@@ -1635,12 +1411,448 @@ a {
     margin: 0 0 18px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+.approvals-section {
+    position: relative;
+    background: #121416;
+    color: #ffffff;
+    padding: 65px 0 140px;
+    overflow: hidden;
+}
+
+.approvals-intro {
+    display: grid;
+    grid-template-columns: 1.35fr .65fr;
+    gap: 70px;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.approvals-intro-content h2 {
+    color: #107FAE;
+    font-size: 32px;
+    line-height: 1.2;
+    margin: 0 0 20px;
+    font-weight: 600;
+}
+
+.approvals-intro-content h3 {
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+.approvals-intro-content p {
+    color: #eeeeee;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.approvals-intro-image {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.approvals-intro-image img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.approvals-content-block {
+    margin-top: 25px;
+}
+
+.approvals-content-block h2 {
+    color: #107FAE;
+    font-size: 32px;
+    line-height: 1.2;
+    margin: 0 0 18px;
+    font-weight: 600;
+}
+
+.approvals-content-block p {
+    color: #eeeeee;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0 0 18px;
+}
+
+.approvals-content-block ul {
+    margin: 0 0 25px;
+    padding-left: 25px;
+    color: #eeeeee;
+}
+
+.approvals-content-block li {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 3px;
+}
+
+.compliance-block {
+    margin-top: 35px;
+}
+
+.compliance-block strong {
+    font-weight: 600;
+}
+
+.approval-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 55px;
+}
+
+.approval-card {
+    background: linear-gradient(
+        135deg,
+        #35373a 0%,
+        #292b2e 55%,
+        #3d3f42 100%
+    );
+
+    border-radius: 12px;
+    padding: 25px 18px;
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.approval-card h3 {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 0 0 25px;
+    font-weight: 600;
+}
+
+.approval-card .reference-title {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 4px;
+}
+
+.approval-card > p:not(.reference-title) {
+    color: #dddddd;
+    font-size: 18px;
+    margin: 0;
+}
+
+.approval-card .gold-button {
+    margin-top: auto;
+    padding: 8px 18px;
+    font-size: 18px;
+}
+
+.contact-section {
+    position: relative;
+    background: #121416;
+    color: #ffffff;
+    padding: 70px 0 140px;
+    overflow: hidden;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: .75fr 1.25fr;
+    gap: 75px;
+    align-items: start;
+}
+
+.contact-info {
+    padding-top: 5px;
+}
+
+.contact-info h2 {
+    color: #107FAE;
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 0 0 22px;
+    font-weight: 600;
+}
+
+.contact-info h3 {
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+.contact-info p {
+    color: #eeeeee;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0 0 25px;
+}
+
+.contact-form-card {
+    background: linear-gradient(
+        135deg,
+        #35373a 0%,
+        #292b2e 55%,
+        #3d3f42 100%
+    );
+    border-radius: 14px;
+    padding: 30px 22px 35px;
+}
+
+.contact-form-card h2 {
+    color: #107FAE;
+    font-size: 22px;
+    line-height: 1.2;
+    margin: 0 0 22px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea,
+.spam-protection input {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #ffffff;
+    color: #222222;
+    border-radius: 4px;
+    padding: 10px 12px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.form-group input {
+    height: 36px;
+}
+
+.form-group textarea {
+    height: 108px;
+
+    resize: vertical;
+}
+
+.spam-protection {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 3px;
+    margin-bottom: 15px;
+}
+
+.spam-protection strong {
+    font-size: 18px;
+}
+
+.spam-protection input {
+    height: 36px;
+    margin-top: 1px;
+}
+
+.contact-form-card .gold-button {
+    border: none;
+    cursor: pointer;
+    padding: 9px 22px;
+    font-size: 18px;
+}
+
+@media (max-width: 700px) {
+
+    .contact-section {
+        padding: 55px 0 100px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .contact-info h2 {
+        font-size: 28px;
+    }
+
+    .contact-info h3 {
+        font-size: 16px;
+    }
+
+    .contact-info p {
+        font-size: 13px;
+    }
+
+    .contact-form-card {
+        padding: 25px 18px 30px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .approvals-section {
+        padding: 55px 0 100px;
+    }
+
+    .approvals-intro {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        margin-bottom: 30px;
+    }
+
+    .approvals-intro-content h2 {
+        font-size: 28px;
+    }
+
+    .approvals-intro-content h3 {
+        font-size: 16px;
+    }
+
+    .approvals-intro-image img {
+        height: 250px;
+    }
+
+    .approvals-content-block h2 {
+        font-size: 21px;
+    }
+
+    .approvals-content-block p,
+    .approvals-content-block li {
+        font-size: 13px;
+    }
+
+    .approval-cards {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 15px;
+
+        margin-top: 45px;
+    }
+
+    .approval-card {
+        min-height: 175px;
+
+        padding: 22px 16px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .approval-cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .header-container {
+        width: 90%;
+        min-height: 75px;
+    }
+
+    .logo img {
+        width: 105px;
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #107FAE;
+        padding: 20px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .main-nav > a {
+        width: 100%;
+        padding: 14px 30px;
+        color: #ffffff;
+        font-size: 13px;
+    }
+
+    .nav-dropdown {
+        width: 100%;
+    }
+
+    .dropdown-toggle {
+        width: 100%;
+        padding: 14px 30px;
+        border: none;
+        background: transparent;
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        background: #107FAE;
+        padding: 0;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+    }
+
+    .nav-dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 12px 45px;
+        color: #ffffff;
+        font-size: 12px;
+    }
+
+    .dropdown-menu a:hover {
+        background: #252628;
+        color: #107FAE;
+    }
+}
 
 @media (max-width: 1000px) {
-
     .main-nav {
         gap: 18px;
     }
@@ -1676,7 +1888,6 @@ a {
 
 
 @media (max-width: 700px) {
-
     .header-container {
         min-height: 75px;
     }
@@ -1690,9 +1901,6 @@ a {
         color: #ffffff;
     }
 
-
-    /* Hero */
-
     .hero {
         min-height: 550px;
     }
@@ -1704,9 +1912,6 @@ a {
     .hero h1 {
         font-size: 34px;
     }
-
-
-    /* About */
 
     .about-section {
         padding: 75px 0 100px;
@@ -1721,9 +1926,6 @@ a {
         font-size: 14px;
     }
 
-
-    /* Services */
-
     .services-section {
         padding: 70px 0 90px;
     }
@@ -1737,9 +1939,6 @@ a {
         width: 100%;
         margin: 0 auto;
     }
-
-
-    /* Footer */
 
     .footer-container {
         grid-template-columns: 1fr;
