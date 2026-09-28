@@ -284,7 +284,7 @@ a {
 
 .about-hero--news {
     --page-hero-image: url("./images/hero-news.jpg");
-    --page-hero-position: center 50%;
+    --page-hero-position: center 15%;
     --page-hero-mobile-position: center 50%;
 }
 
@@ -296,7 +296,7 @@ a {
 
 .about-hero--aircraft-acquisition {
     --page-hero-image: url("./images/hero-aircraft-acquisition.jpg");
-    --page-hero-position: center 55%;
+    --page-hero-position: center 80%;
     --page-hero-mobile-position: center 55%;
 }
 
